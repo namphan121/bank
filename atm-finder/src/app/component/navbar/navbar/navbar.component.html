@@ -1,0 +1,23 @@
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container">
+    <div class="navbar-content">
+      <div class="d-flex align-items-center">
+        <a class="navbar-brand" href="#">
+          <img src="assets/image/logo.png" alt="Company Logo" style="height: 40px;">
+        </a>
+        <span class="navbar-text text-white ms-2">
+          ATM Management System
+        </span>
+      </div>
+
+      <div class="search-container">
+        <input 
+          class="form-control search-input" 
+          type="search" 
+          placeholder="Search ATMs..." 
+          aria-label="Search"
+          (input)="onSearch($event)">
+      </div>
+    </div>
+  </div>
+</nav>

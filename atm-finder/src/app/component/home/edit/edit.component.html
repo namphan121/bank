@@ -1,0 +1,35 @@
+<div class="container mt-4">
+  <div class="card">
+    <div class="card-header">
+      <h4>{{editMode ? 'Edit ATM' : 'Add New ATM'}}</h4>
+    </div>
+    <div class="card-body">
+      <form>
+        <div class="mb-3">
+          <label class="form-label">ATM Name:</label>
+          <input type="text" class="form-control" [(ngModel)]="currentAtm.name" name="name">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Manufacturer:</label>
+          <input type="text" class="form-control" [(ngModel)]="currentAtm.manufacturer" name="manufacturer">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Type:</label>
+          <input type="text" class="form-control" [(ngModel)]="currentAtm.type" name="type">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Serial Number:</label>
+          <input type="text" class="form-control" [(ngModel)]="currentAtm.serialNumber" name="serialNumber">
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Image:</label>
+          <input type="file" class="form-control" accept="image/*">
+        </div>
+        <div class="d-flex justify-content-end gap-2">
+          <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+          <button type="button" class="btn btn-primary" (click)="saveAtm()">Save</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
